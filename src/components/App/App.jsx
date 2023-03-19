@@ -24,6 +24,7 @@ class App extends Component {
   }
 
 
+
   addContact = (newContact) => {
     const { contacts } = this.state;
     const updatedContact = [newContact, ...contacts];
@@ -36,8 +37,8 @@ class App extends Component {
     this.setState({ contacts: updatedContact });
   }
 
-  handleChangeFilter = e => {
-    this.setState({ filter: e.target.value })
+  handleChangeFilter = event => {
+    this.setState({ filter: event.target.value })
   }
 
   getFilteredContasts = () => {
